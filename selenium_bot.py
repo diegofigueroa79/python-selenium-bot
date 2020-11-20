@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
+import bs4
 
 browser = webdriver.Chrome()
 browser.get("https://www.sleepfoundation.org/bedtimecalculator")
@@ -18,7 +19,6 @@ awake_hour.select_by_visible_text('9')
 awake_minute = Select(browser.find_element_by_class_name('bedtime-minute'))
 awake_minute.select_by_visible_text('30')
 
-
-
 calculate = browser.find_element_by_id("b-w")
 calculate.click()
+
